@@ -1,0 +1,94 @@
+/* styles.css 파일에 분리된 CSS 코드 작성 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.header {
+    background-color: #333;
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* 사용자 정보와 버튼을 좌우로 정렬 */
+    align-items: center;
+    padding: 10px;
+}
+
+.user-info {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.username {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.webtoon-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.webtoon-image {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.webtoon-info {
+    flex: 1;
+}
+
+.webtoon-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.webtoon-author {
+    font-size: 14px;
+    color: #888;
+}
+
+.subscribe-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.charge-button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.free-charged {
+    color: #28a745;
+}
