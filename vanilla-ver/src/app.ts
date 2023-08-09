@@ -46,9 +46,7 @@ class Webtoon implements Subject{ //웹툰 클래스, 주제에 해당
     }
 
     registerObserver(observer: Observer): void { //옵저버 추가
-
         this.subscribers.push(observer);
-
     }
 
     removeObserver(observer: Observer): void { //옵저버에서 삭제
