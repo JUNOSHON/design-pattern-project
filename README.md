@@ -11,6 +11,22 @@
 
 - `**HTML5 + CSS3 + JavaScript**`
 
+## 📝Git Convention
+
+---
+
+| Tag Name | Description |
+| --- | --- |
+| Feat | 새로운 기능 추가 |
+| Design | CSS등 사용자 UI 디자인 변경 |
+| Rename | 파일 혹은 폴더명을 수정하거나 옮기는 작업 |
+| Remove | 파일을 삭제하는 작업 |
+| Test | 테스트 코드, 리팩토링 테스트 코드 추가,실제 사용 코드 변경 없음 |
+| Docs | 문서 수정 |
+| Style | 코드 포맷 변경 |
+| Refactor | 결과의 변경없이 코드의 구조 재조정 |
+| Fix | 코드 수정 및 버그 수정 |
+
 ## 🎨 사용하는 디자인 패턴
 
 ### 옵저버 패턴
