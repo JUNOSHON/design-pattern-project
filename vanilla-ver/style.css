@@ -70,7 +70,11 @@ body {
 
 .webtoon-author {
     font-size: 14px;
+<<<<<<< HEAD:vanilla-ver/styles.css
     color: #28a745;
+=======
+    color: green;
+>>>>>>> main:vanilla-ver/style.css
 }
 
 .subscribe-button {
@@ -89,6 +93,7 @@ body {
     cursor: pointer;
 }
 
-.free-charged {
-    color: #28a745;
+.free-charged-text {
+    color: green;
 }
+
