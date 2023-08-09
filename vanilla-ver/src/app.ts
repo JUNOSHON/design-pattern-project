@@ -1,9 +1,14 @@
-
-
 interface Observer {
     update(isFreeCharge: boolean): void;
 }
 
+interface Subject {
+    registerObserver(observer: Observer): void;
+
+    removeObserver(observer: Observer): void;
+
+    setIsFreeCharge(isFreeCharge: boolean): void
+}
 
 
 class User implements Observer { //User는 Observer 인터페이스를 구현함으로써 옵저버가 됨
@@ -31,7 +36,7 @@ class User implements Observer { //User는 Observer 인터페이스를 구현함
 }
 
 
-class Webtoon { //웹툰 클래스, 주제에 해당
+class Webtoon implements Subject{ //웹툰 클래스, 주제에 해당
     title: string;
     subscribers: Observer[] = [];
     isFreeCharge: boolean = false;
@@ -53,7 +58,7 @@ class Webtoon { //웹툰 클래스, 주제에 해당
         }
     }
 
-    setisFreeCharge(isFreeCharge: boolean): void { //notify
+    setIsFreeCharge(isFreeCharge: boolean): void { //notify
         this.isFreeCharge = isFreeCharge;
         for (const subscriber of this.subscribers) {
             subscriber.update(isFreeCharge);
@@ -100,7 +105,7 @@ chargeButtons.forEach(button => {
         button.addEventListener("click", () => {
             if (yun.getSubscribeState()) {
                 const webtoon = webtoonTitle === "랜덤채팅의 그녀" ? randomChattingWebtoon : nohiWebtoon;
-                webtoon.setisFreeCharge(true);
+                webtoon.setIsFreeCharge(true);
 
                 webtoonAuthor.textContent = "무료충전완료!";
                 webtoonAuthor.classList.add("free-charge-text");
