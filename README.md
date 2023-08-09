@@ -32,7 +32,8 @@
 ### 옵저버 패턴
 
 ---
-![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/8573ad69-29aa-4efd-acea-411db75c7794)
+![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/84c96b00-0aef-4383-99fb-1b67a1732068)
+
 
 
 - 웹툰은 주제(Subject), 사용자는 옵저버(Observer)임.
