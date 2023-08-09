@@ -25,7 +25,7 @@ class User implements Observer { //User는 Observer 인터페이스를 구현함
         this.isSubscribed = !this.isSubscribed;
     }
 
-    getSubscriptionStatus(): boolean {
+    getSubscribeState(): boolean {
         return this.isSubscribed;
     }
 }
@@ -75,7 +75,7 @@ subscribeButtons.forEach(button => {
 
         button.addEventListener("click", () => {
             user.toggleSubscribe();
-            if (user.getSubscriptionStatus()) {
+            if (user.getSubscribeState()) {
                 randomChattingWebtoon.registerObserver(user);
                 nohiWebtoon.registerObserver(user);
                 button.textContent = "구독 취소";
@@ -98,7 +98,7 @@ chargeButtons.forEach(button => {
         const webtoonAuthor = webtoonCard.querySelector(".webtoon-author");
 
         button.addEventListener("click", () => {
-            if (yun.getSubscriptionStatus()) {
+            if (yun.getSubscribeState()) {
                 const webtoon = webtoonTitle === "랜덤채팅의 그녀" ? randomChattingWebtoon : nohiWebtoon;
                 webtoon.setisFreeCharge(true);
 

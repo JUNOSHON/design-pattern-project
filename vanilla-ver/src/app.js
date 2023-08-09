@@ -12,7 +12,7 @@ var User = /** @class */ (function () {
     User.prototype.toggleSubscribe = function () {
         this.isSubscribed = !this.isSubscribed;
     };
-    User.prototype.getSubscriptionStatus = function () {
+    User.prototype.getSubscribeState = function () {
         return this.isSubscribed;
     };
     return User;
@@ -54,7 +54,7 @@ subscribeButtons.forEach(function (button) {
         var user_1 = yun; // 웹툰을 구독하는 사용자
         button.addEventListener("click", function () {
             user_1.toggleSubscribe();
-            if (user_1.getSubscriptionStatus()) {
+            if (user_1.getSubscribeState()) {
                 randomChattingWebtoon.registerObserver(user_1);
                 nohiWebtoon.registerObserver(user_1);
                 button.textContent = "구독 취소";
@@ -77,7 +77,7 @@ chargeButtons.forEach(function (button) {
         var webtoonTitle_1 = (_a = webtoonCard.querySelector(".webtoon-title")) === null || _a === void 0 ? void 0 : _a.textContent;
         var webtoonAuthor_1 = webtoonCard.querySelector(".webtoon-author");
         button.addEventListener("click", function () {
-            if (yun.getSubscriptionStatus()) {
+            if (yun.getSubscribeState()) {
                 var webtoon = webtoonTitle_1 === "랜덤채팅의 그녀" ? randomChattingWebtoon : nohiWebtoon;
                 webtoon.setisFreeCharge(true);
                 webtoonAuthor_1.textContent = "무료충전완료!";
