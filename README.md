@@ -16,6 +16,8 @@
 ### 옵저버 패턴
 
 ---
+![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/8573ad69-29aa-4efd-acea-411db75c7794)
+
 
 - 웹툰은 주제(Subject), 사용자는 옵저버(Observer)임.
 - **옵저버가 주제를 구독함 → 사용자가 웹툰을 구독함**
