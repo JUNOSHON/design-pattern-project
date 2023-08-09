@@ -32,7 +32,7 @@ var Webtoon = /** @class */ (function () {
             this.subscribers.splice(index, 1);
         }
     };
-    Webtoon.prototype.setisFreeCharge = function (isFreeCharge) {
+    Webtoon.prototype.setIsFreeCharge = function (isFreeCharge) {
         this.isFreeCharge = isFreeCharge;
         for (var _i = 0, _a = this.subscribers; _i < _a.length; _i++) {
             var subscriber = _a[_i];
@@ -79,7 +79,7 @@ chargeButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             if (yun.getSubscribeState()) {
                 var webtoon = webtoonTitle_1 === "랜덤채팅의 그녀" ? randomChattingWebtoon : nohiWebtoon;
-                webtoon.setisFreeCharge(true);
+                webtoon.setIsFreeCharge(true);
                 webtoonAuthor_1.textContent = "무료충전완료!";
                 webtoonAuthor_1.classList.add("free-charge-text");
             }
