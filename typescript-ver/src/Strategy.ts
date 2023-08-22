@@ -3,6 +3,7 @@ import readline from "readline";
 import {Webtoon} from "./Observer";
 import {users} from "./mainmenu";
 import {webtoons} from "./mainmenu";
+import {User} from "./UserFactory";
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -68,3 +69,28 @@ export function signUp() {
         });
     });
 }
+
+
+interface LoginStrategy {
+    authenticate(username: string, password: string): User | undefined;
+}
+
+
+class UserLoginStrategy implements LoginStrategy {
+    authenticate(username: string, password: string): User | undefined {
+        return users.find(u => u.username === username && u.password === password);
+    }
+}
+
+
+class AdminLoginStrategy implements LoginStrategy {
+    authenticate(username: string, password: string): User | undefined {
+        if (username === 'admin' && password === 'admin') {
+            return { username: 'admin', password: 'admin', subscribedWebtoons: [] };
+        }
+        return undefined;
+    }
+}
+
+
+const selectedLoginStrategy: LoginStrategy = new UserLoginStrategy(); // User 로그인 전략
