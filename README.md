@@ -9,7 +9,7 @@
 
 ## ⚙️ 개발 환경
 
-- `**HTML5 + CSS3 + JavaScript**`
+- <b>ES6</b>
 
 ## 📝Git Convention
 
@@ -32,27 +32,21 @@
 ### 옵저버 패턴
 
 ---
-![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/84c96b00-0aef-4383-99fb-1b67a1732068)
+- 주제가 웹툰, 독자가 웹툰을 구독하면 웹툰이 무료 충전이 되었을 때 사용자에게 알림을 보냄
+-  **옵저버가 주제를 구독함 → 사용자가 웹툰을 구독함**
 
 
-
-- 웹툰은 주제(Subject), 사용자는 옵저버(Observer)임.
-- **옵저버가 주제를 구독함 → 사용자가 웹툰을 구독함**
-- 주제의 상태가 변하면(무료 충전이 되면) → 자신을 구독하고 있는 사용자들에게 **‘무료충전완료’** 라는 메시지를 띄워줌.
-
-![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/2b6eb713-5f3e-4088-84b7-6703f2c108bc)
-
-
-![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/9f6644c6-e63f-44d8-9db5-4812e311b495)
-
-
-![image](https://github.com/JUNOSHON/design-pattern-project/assets/67476544/e99af355-11d1-423d-99dd-ff5454278f47)
-
-
-### 상태 패턴
+### 팩토리 패턴
 
 ---
 
-- 구독하기 버튼을 누르면 구독하기 버튼의 텍스트가 구독 취소로 바뀜 → 객체의 상태에 따라(버튼이 **‘구독하기’**인지 **‘구독취소**’ 인지 에 따라) 다른 행동을 취함 → 상태패턴…?
+- User 객체를 생성하는 UserFactory 사용.
+- createUser 를 사용해 유저 객체를 생성하고 반환함.
 
-### 퍼사드 패턴
+### 전략 패턴
+---
+- 관리자 모드 로그인을 전략 패턴을 사용해 구현
+- LoginStrategy 인터페이스를 각 서브클래스에서 구현함으로써 관리자와 일반 사용자 로그인 구현
+
+   <img width="360" alt="image" src="https://github.com/JUNOSHON/design-pattern-project/assets/67476544/24edb8a9-5dd9-4a77-8160-acb1e6c22689">
+
